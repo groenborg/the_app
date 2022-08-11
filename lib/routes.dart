@@ -17,5 +17,5 @@ class Routes {
 var routes = <String, Widget Function(BuildContext)>{
   Routes.initialPage: (context) => const Login(),
   Routes.onboarding: (context) => const Onboarding(),
-  Routes.home: (context) => const Home(),
+  Routes.home: (context) => const Home(name: 'Welcome',),
 };

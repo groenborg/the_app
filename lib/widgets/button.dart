@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 class Button extends StatelessWidget {
-  const Button({Key? key, required this.onPressed}) : super(key: key);
+  const Button({Key? key, required this.onPressed,  required this.filler})
+      : super(key: key);
 
   final GestureTapCallback onPressed;
+  final Widget filler;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class Button extends StatelessWidget {
           Radius.circular(16),
         ),
       ),
-      child: const Icon(CupertinoIcons.arrow_right),
+      child: filler,
     );
   }
 }

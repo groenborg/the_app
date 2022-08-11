@@ -1,15 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// Home screen
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({Key? key, required this.name}) : super(key: key);
+
+  final String name;
 
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(middle: Text('bar'),),
-      child: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(name),
+      ),
+      body: const Center(
         child: Text('hellos'),
       ),
     );

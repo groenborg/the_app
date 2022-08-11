@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:the_app/routes.dart';
 
@@ -11,13 +10,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
+    return MaterialApp(
       title: 'Flutter Demo',
-      theme: CupertinoThemeData(
-        primaryColor: CupertinoTheme.of(context).primaryColor,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
       routes: routes,
       initialRoute: '/',
+      debugShowCheckedModeBanner: false,
     );
   }
 }
